@@ -446,7 +446,7 @@ class Simulation:
     def simulate(self):
         while self.running:
             self.gui.canvas.delete("all")
-            image = np.full((self.height, self.width, 3), self.bg_color[0])
+            image = np.full((self.height, self.width, 3), self.bg_color[0], dtype=np.uint8)
             self.link_colors = []
 
             self.update_vars()
